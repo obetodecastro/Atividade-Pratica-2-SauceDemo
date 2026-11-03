@@ -1,0 +1,10 @@
+# Dependências
+node_modules/
+
+# Relatórios do Playwright
+playwright-report/
+test-results/
+
+# Arquivos de ambiente
+.env
+.env.*
