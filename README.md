@@ -61,10 +61,11 @@ Para executar o projeto, é necessário ter instalado:
 
 ### Instalação das dependências
 
-Na pasta raiz do projeto, execute o comando:
+Na pasta raiz do projeto, execute:
 
-(bash)
+```bash
 npm install
+```
 
 Esse comando instala as dependências necessárias, conforme as versões registradas no arquivo `package-lock.json`.
 
@@ -72,38 +73,51 @@ Esse comando instala as dependências necessárias, conforme as versões registr
 
 Para instalar o Chromium utilizado nos testes, execute:
 
-(bash) 
+```bash
 npx playwright install chromium
+```
 
 ### Execução dos testes
 
 Para executar todos os testes automatizados:
 
-(bash)
+```bash
 npx playwright test
-
+```
 
 Para visualizar o relatório HTML:
 
-(bash)
+```bash
 npx playwright show-report
-
+```
 
 Para executar somente os testes de login:
 
-(bash)
+```bash
 npx playwright test tests/login-data-driven.spec.ts
-
+```
 
 Para executar somente o teste de sessão autenticada:
 
-(bash)
+```bash
 npx playwright test tests/dashboard-sessao.spec.ts
-
+```
 
 ## Aplicação utilizada
 
-**SauceDemo:** https://www.saucedemo.com/
+**SauceDemo:** [https://www.saucedemo.com/](https://www.saucedemo.com/)
+
+### Observação sobre a identificação da sessão autenticada
+
+Na aplicação SauceDemo, a página de produtos (`inventory.html`) não apresenta um indicador explícito com o nome ou perfil do usuário autenticado.
+
+Por esse motivo, a validação da sessão neste projeto utiliza elementos que caracterizam a área autenticada:
+
+- **Título "Products":** confirma a exibição da página de produtos.
+- **Lista de produtos (`inventory-list`):** confirma o carregamento do conteúdo da área autenticada.
+- **Opção "Logout":** permite verificar a disponibilidade da funcionalidade de encerramento da sessão.
+
+Essa abordagem respeita a estrutura da aplicação utilizada como ambiente de testes, sem depender de elementos de identificação que não estão disponíveis na interface.
 
 ### Credenciais de teste
 

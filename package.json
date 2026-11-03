@@ -1,13 +1,24 @@
+
 {
   "name": "atividade-pratica-2-saucedemo",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projeto de automação de testes E2E com Playwright e TypeScript, utilizando POM, Fixtures e Data-Driven Testing.",
   "main": "index.js",
   "scripts": {
     "test": "playwright test"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "qa",
+    "quality-assurance",
+    "test-automation",
+    "playwright",
+    "typescript",
+    "pom",
+    "fixtures",
+    "data-driven-testing",
+    "e2e"
+  ],
+  "author": "Roberto Castro",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
